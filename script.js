@@ -304,12 +304,7 @@ class ScanlineFill {
                 //
                 // --------------------------------------------
 
-                this.ctx.fillRect(
-                    xStart,
-                    y,
-                    xEnd - xStart + 1,
-                    1
-                );
+                const width = xEnd - xStart;
             }
 
             // ------------------------------------------------
