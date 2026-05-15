@@ -230,7 +230,7 @@ class ScanlineFill {
         //
         // ====================================================
 
-        for (let y = minY; y <= maxY; y++) {
+        for (let y = Math.ceil(minY); y <= Math.floor(maxY); y++) {
 
             // ------------------------------------------------
             // 4.1 AGREGAR NUEVAS ARISTAS ACTIVAS
@@ -305,6 +305,14 @@ class ScanlineFill {
                 // --------------------------------------------
 
                 const width = xEnd - xStart;
+                if (width > 0) {
+                    this.ctx.fillRect(
+                        xStart,
+                        y,
+                        width,
+                        1
+                    );
+                }
             }
 
             // ------------------------------------------------
