@@ -337,14 +337,15 @@ class ScanlineFill {
     }
 }
 
-/**
- * ============================================================
- * EJEMPLO DE USO
- * ============================================================
- */
+// ============================================================
+// CREAR CANVAS DESDE JS
+// ============================================================
 
-// Obtener canvas
-const canvas = document.getElementById("canvas");
+const canvas = document.createElement("canvas");
+canvas.width = 800;
+canvas.height = 600;
+
+document.body.appendChild(canvas);
 
 // Contexto 2D
 const ctx = canvas.getContext("2d");
